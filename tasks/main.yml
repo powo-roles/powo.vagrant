@@ -17,4 +17,4 @@
   block:
     - name: install
       yum:
-        name: "{{ pva_dest_folder }}/{{ _pva_basename }}"
+        name: "{{ pva_dest_folder | expanduser }}/{{ _pva_basename }}"
