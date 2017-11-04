@@ -1,0 +1,4 @@
+---
+
+_pva_download: "{{ pva_download | distro(vars) }}"
+_pva_basename: "{{ _pva_download.basename | default(_pva_download.url | basename) }}"

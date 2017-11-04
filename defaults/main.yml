@@ -1,0 +1,11 @@
+---
+
+pva_version: 2.0.1
+
+pva_url:
+  RedHat:
+    url: https://releases.hashicorp.com/vagrant/{{ pva_version }}/vagrant_{{ pva_version }}_x86_64.rpm
+    checksum: sha256:df28c4ba7420dc6983955cf3af66dddddd892ad852154e9b9dbcd1acbebc083c
+  Debian:
+    url: https://releases.hashicorp.com/vagrant/{{ pva_version }}/vagrant_{{ pva_version }}_x86_64.dev
+    checksum: sha256:2f9498a83b3d650fcfcfe0ec7971070fcd3803fad6470cf7da871caf2564d84f

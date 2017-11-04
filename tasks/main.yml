@@ -1,0 +1,20 @@
+---
+
+- name: directory
+  file:
+    path: "{{ pva_dest_folder }}"
+    state: directory
+
+- name: download
+  get_url:
+    url: "{{ _pva_download.url }}"
+    checksum: "{{ _pva_download.checksum }}"
+    dest: "{{ pva_dest_folder }}/{{ _pva_basename }}"
+
+- name: privileged
+  become: true
+  become_user: root
+  block:
+    - name: install
+      yum:
+        name: "{{ pva_dest_folder }}/{{ _pva_basename }}"
