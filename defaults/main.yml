@@ -4,7 +4,7 @@ pva_version: 2.0.1
 
 pva_dest_folder: "{{ mandatory }}"
 
-pva_url:
+pva_download:
   RedHat:
     url: https://releases.hashicorp.com/vagrant/{{ pva_version }}/vagrant_{{ pva_version }}_x86_64.rpm
     checksum: sha256:df28c4ba7420dc6983955cf3af66dddddd892ad852154e9b9dbcd1acbebc083c
