@@ -18,3 +18,12 @@
     - name: install
       yum:
         name: "{{ pva_dest_folder | expanduser }}/{{ _pva_basename }}"
+      when: |
+        ansible_distribution != 'Fedora'
+        or ansible_distribution_major_version | int < 27
+    - name: install
+      dnf:
+        name: "{{ pva_dest_folder | expanduser }}/{{ _pva_basename }}"
+      when: |
+        ansible_distribution == 'Fedora'
+        and ansible_distribution_major_version | int <= 27
