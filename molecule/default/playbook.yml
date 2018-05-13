@@ -39,3 +39,5 @@
     - name: powo.vagrant
       include_role:
         name: powo.vagrant
+      vars:
+        pva_dest_folder: /tmp
