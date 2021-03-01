@@ -19,10 +19,12 @@
     - name: install
       yum:
         name: "{{ pva_dest_folder | expanduser }}/{{ _pva_basename }}"
+        disable_gpg_check: true
       when: ansible_distribution != 'Fedora'
     - name: install
       dnf:
         name: "{{ pva_dest_folder | expanduser }}/{{ _pva_basename }}"
+        disable_gpg_check: true
       when: ansible_distribution == 'Fedora'
 
 - name: privileged
